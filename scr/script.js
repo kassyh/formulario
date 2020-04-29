@@ -17,3 +17,28 @@ function register(){
     console.log(email);
     
     }
+    function textCase(){
+
+        event.preventDefault();
+        
+        let nome = document.getElementById("nome");
+        nome.value = nome.value.toUpperCase();
+
+        nome = document.getElementById("nome").value;
+
+        console.log(nome);
+    }
+
+    function validarSenha(){
+
+        event.preventDefault();
+
+        var senha = document.getElementById("senha").value;
+
+        if(senha =="" || senha.length <= 7){
+            document.getElementById("erroSenha").innerHTML = "<span style='color: #ff0000'> Preencha o campo senha com no minimo 8 caracteres</span>";
+        }else{
+            document.getElementById("erroSenha").innerHTML = "<span style='color: #00ff00'>Senha Válida</style>";
+        }
+        console.log(senha);
+    }
